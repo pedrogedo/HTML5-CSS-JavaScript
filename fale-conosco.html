@@ -27,40 +27,104 @@
                     </ul>
                 </nav>
             </header>
+            <section id="corp-full">
+                <article id="noticia-principal">
+                    <header id="cabecalho-artigo">
+                        <hgroup>
+                            <h3>Fale Conosco > Contato</h3>
+                            <h1>Formulário de Contato</h1>
+                            <h2>por Pedro Henrique</h2>
+                            <h3 class="direita">Atualizado em 11/Dezembro/2017</h3>
+                        </hgroup>
+                    </header>
+                    <form method="post" action="mailto:pedro.ads@outlook.com" id="fContato">
+                        <fieldset id="usuario"><legend>Identificação do Usuário</legend>
+                                <p><label for="cNome">Nome:</label>
+                                <input type="text" name="tNome" id="cNome" size="20" maxlength="30" placeholder="Nome Completo"></p>
+                                <p><label for="cSenha">Senha:</label>
+                                <input type="password" name="tSenha" id="cSenha" size="8" maxlength="8" placeholder="8 Dígitos"></p>
+                                <p><label for="cEmail">E-mail:</label>
+                                <input type="email" name="tEmail" id="cEmail" size="20" maxlength="40"></p>
+                                <fieldset id="sexo"><legend>Sexo:</legend>
+                                    <input type="radio" name="tSexo" id="cMasc" checked><label for="cMasc">Masculino</label><br>
+                                    <input type="radio" name="tSexo" id="cFem"><label for="cFem">Feminino</label>
+                                </fieldset>
+                                <p><label for="cNasc">Data de Nascimento: </label><input type="date" name="tNasc" id="cNasc"></p>
+                        </fieldset>
 
-            Fale Conosco > Contato
-            Formulário de Contato
-            por Gustavo Guanabara
-            Atualizado em 01/Maio/2013
+                        <fieldset id="endereco"><legend>Endereço do Usuário</legend>
+                                <p><label for="cRua">Logradouro:</label> <input type="text" name="tRua" id="cRua" size="13" maxlength="80" placeholder="Rua, Av, Trav,..."></p>
+                                <p><label for="cNum">Número: </label><input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+                                <p><label for="cEst">Estado:</label>
+                                <select name="tEst" id="cEst">
+                                    <optgroup label="Região Norte">
+                                        <option value="AC">Acre</option>
+                                        <option value="AP">Amapá</option>
+                                        <option value="AM">Amazonas</option>
+                                        <option value="PA">Pará</option>
+                                        <option value="RO">Rondônia</option>
+                                        <option value="RR">Roraima</option>
+                                        <option value="TO">Tocantis</option>
+                                    </optgroup>
 
-            Identificação do Usuário
-                Nome:
-                Senha:
-                E-mail:
-                Sexo:
-                    - Masculino
-                    - Feminino
-                Data de Nascimento:
+                                    <optgroup label="Região Nordeste">
+                                        <option value="AL">Alagoas</option>             
+                                        <option value="BA">Bahia</option>
+                                        <option value="CE">Ceará</option>
+                                        <option value="MA">Maranhão</option>
+                                        <option value="RN">Rio Grande do Norte</option>
+                                        <option value="PB">Paraíba</option>
+                                        <option value="PE">Pernambuco</option>
+                                        <option value="PI">Piauí</option>
+                                        <option value="SE">Sergipe</option>
+                                    </optgroup>
 
-            Endereço do Usuário
-                Logradouro:
-                Número:
-                Estado:
-                Cidade:
+                                    <optgroup label="Região Centro-Oeste">
+                                        <option value="GO">Goiás</option>               
+                                        <option value="MT">Mato Grosso</option>
+                                        <option value="MS">Mato Grosso do Sul</option>
+                                    </optgroup>
 
-            Mensagem do Usuário
-                Grau de Urgência:
-                Mensagem:
+                                    <optgroup label="Região Sudeste">
+                                        <option value="ES">Espírito Santo</option>
+                                        <option value="MG">Minas Gerais</option>
+                                        <option value="RJ">Rio de Janeiro</option>
+                                        <option value="SP">São Paulo</option>           
+                                    </optgroup>
 
-            Quero um Google Glass
-                Gostaria de adquirir um Google Glass quando disponível
-                Cor:
-                Quantidade:
-                Preço Total: R$
+                                    <optgroup label="Região Sul">
+                                        <option value="PR">Paraná</option>              
+                                        <option value="RS">Rio Grande do Sul</option>
+                                        <option value="SC">Santa Catarina</option>
+                                    </optgroup>
+                                </select></p>
+                                <p><label for="cCid">Cidade:</label> 
+                                <input type="text" name="tCid" id="cCid" maxlength="40" size="20" placeholder="Sua Cidade" list="cidades"></p>
+                                <datalist id="cidades">
+                                    <option value="Rio de Janeiro"></option>
+                                    <option value="Nova Iguaçu"></option>
+                                    <option value="Niterói"></option>
+                                    <option value="Belford Roxo"></option>
+                                </datalist>
+                        </fieldset>
 
+                        <fieldset id="mensagem"><legend>Mensagem do Usuário</legend>
+                                <p><label for="cUrg">Grau de Urgência:</label> Min<input type="range" name="tUrg" id="cUrg" min="0" max="10" step="2">Máx</p>
+                                <p><label for="cMsg">Mensagem:</label> 
+                                <textarea name="tMsg" id="cMsg" cols="45" rows="5" placeholder="Deixe aqui sua mensagem"></textarea></p>
+                        </fieldset>
 
-            [BOTÃO ENVIAR]
+                        <fieldset id="pedido"><legend>Quero um Google Glass</legend>
+                                <p><label for="cPed">Gostaria de adquirir um Google Glass quando disponível</label></p>
+                                <p><label for="cCor">Cor:</label> </p>
+                                <p><label for="cQtd">Quantidade:</label> </p>
+                                <p><label for="cTot">Preço Total: R$</label></p>
+                        </fieldset>     
 
+                        <input type="submit" value="Enviar">
+                    </form>
+                </article>
+            </section>
             <footer id="rodape">
                 <p>Copyright &copy; 2017 - by Pedro Henrique<br>
                 <a href="https://www.facebook.com/" target="blank">Facebook</a> | Twitter</p>
